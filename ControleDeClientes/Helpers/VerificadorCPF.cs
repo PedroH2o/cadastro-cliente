@@ -1,4 +1,4 @@
-﻿namespace ControleDeClientes {
+﻿namespace ControleDeClientes.Helpers {
     internal class VerificadorCPF {
 
         public static bool ValidarCpf(string cpf) {
@@ -21,13 +21,13 @@
                 multiplicador--;
             }
 
-            soma = (soma * 10) % 11;
+            soma = soma * 10 % 11;
 
             if (soma >= 10) {
                 soma = 0;
             }
 
-            return soma == (cpf[10 - digito]) - '0';
+            return soma == cpf[10 - digito] - '0';
 
         }
     }

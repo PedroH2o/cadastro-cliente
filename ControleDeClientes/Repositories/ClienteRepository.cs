@@ -38,10 +38,11 @@ namespace ControleDeClientes.Repositories {
 
         }
             
-        public async Task EditarCliente(EntityCliente cliente) {
+        public async Task<bool> EditarCliente(EntityCliente cliente) {
 
             _context.Clientes.Update(cliente);
             await _context.SaveChangesAsync();
+            return true;
             
         }
 

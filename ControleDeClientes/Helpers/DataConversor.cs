@@ -1,4 +1,4 @@
-﻿namespace ControleDeClientes {
+﻿namespace ControleDeClientes.Helpers {
     public class DataConversor {
         public static bool DataNacimentoVerificador(string data_nascimento, out DateTime dataConvertida) {
 
@@ -20,5 +20,5 @@
                  System.Globalization.DateTimeStyles.AllowWhiteSpaces);
         }
     }
-        
+
 }
