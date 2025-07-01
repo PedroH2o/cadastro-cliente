@@ -1,31 +1,27 @@
 @echo off
 setlocal
 
-echo Verificando instalacao do .NET SDK...
-
-dotnet --version >nul 2>&1
-IF %ERRORLEVEL% NEQ 0 (
-    echo ERRO: .NET SDK nao encontrado.
-    echo Baixe e instale manualmente: https://dotnet.microsoft.com/en-us/download/dotnet/6.0
+echo Verificando se .NET está instalado...
+where dotnet >nul 2>&1
+if %ERRORLEVEL% NEQ 0 (
+    echo ERRO: .NET SDK nao instalado. Instale em https://dotnet.microsoft.com/en-us/download
     pause
     exit /b 1
 )
 
-echo Verificando ferramenta dotnet-ef...
+echo Instalando EF CLI, se necessário...
 dotnet tool list -g | findstr dotnet-ef >nul
 IF %ERRORLEVEL% NEQ 0 (
-    echo Instalando dotnet-ef globalmente...
     dotnet tool install --global dotnet-ef
 )
 
-echo Restaurando dependencias...
+echo Restaurando pacotes...
 dotnet restore
 
-echo Aplicando migrations (criando banco SQLite)...
+echo Aplicando migrations para criar o banco...
 dotnet ef database update
 
-echo Iniciando a aplicacao...
+echo Iniciando aplicacao...
 dotnet run
 
-endlocal
 pause
