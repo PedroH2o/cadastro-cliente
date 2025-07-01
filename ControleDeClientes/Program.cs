@@ -5,6 +5,7 @@ using ControleDeClientes.Map;
 using ControleDeClientes.Models;
 using ControleDeClientes.Repositories;
 using ControleDeClientes.Validators;
+using Microsoft.EntityFrameworkCore;
 
 class Program {
     
@@ -12,7 +13,8 @@ class Program {
 
         var context = new AppDbContext();
         var repositorio = new ClienteRepository(context);
- 
+        context.Database.Migrate();
+
         int op = 6;
         string id = " ";
 

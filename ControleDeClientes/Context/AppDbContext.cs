@@ -1,7 +1,5 @@
 ﻿using ControleDeClientes.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ControleDeClientes.Context {
     public class AppDbContext : DbContext {
@@ -13,5 +11,6 @@ namespace ControleDeClientes.Context {
             optionsBuilder.UseSqlite($"Data Source={dbPath}");
 
         }
+
     }
 }
