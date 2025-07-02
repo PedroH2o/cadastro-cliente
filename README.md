@@ -1,8 +1,8 @@
-# cadastro-cliente (.NET 6 + SQLite)
+# cadastro-cliente (.NET 9 + SQLite)
 
 ## 📌 Descrição
 
-Este projeto é uma aplicação console em C# (.NET 6) para cadastro de clientes usando Entity Framework, com persistência em banco de dados local SQLite. O projeto inclui validações básicas de dados e conta com um CRUD completo.
+Este projeto é uma aplicação console em C# (.NET 9) para cadastro de clientes usando Entity Framework, com persistência em banco de dados local SQLite. O projeto inclui validações básicas de dados e conta com um CRUD completo.
 
 ## ✅ Pré-requisitos
 
