@@ -26,9 +26,6 @@ clientes.db
 # Diretório do Visual Studio (cache de IDE)
 .vs/
 
-# Pastas e arquivos gerados por migrações
-Migrations/
-
 # Configurações locais específicas
 *.vscode/
 *.pidb
