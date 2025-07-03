@@ -6,28 +6,19 @@ Este projeto é uma aplicação console em C# (.NET 9) para cadastro de clientes
 
 ## ✅ Pré-requisitos
 
-- [.NET 6 SDK ou superior](https://dotnet.microsoft.com/en-us/download)
+- [.NET 9 SDK ou superior](https://dotnet.microsoft.com/en-us/download)
 - [Git](https://git-scm.com/downloads)
 - Sistema: Windows, Linux ou macOS
 
-## 🚀 Instalação (modo automático no Windows)
-
-Para facilitar a instalação de dependências, criei um arquivo chamado setup.bat que restaura pacotes, cria o banco e executa o app. Abaixo estão os comandos necessários para a execução do arquivo
-
-```bash
-git clone https://github.com/PedroH2o/cadastro-cliente.git
-cd cadastro-cliente
-setup.bat
-```
-
 ## 💻 Execução manual (qualquer sistema)
 
-Caso queira fazer a instalação manual, abaixo estão os comandos necessários, lembrando que ainda será preciso instalar o .Net SDK e o Entity Framework.
+Abaixo estão os comandos necessários, lembrando que ainda será preciso instalar o .Net SDK e o Entity Framework.
 
 ```bash
 dotnet restore
 dotnet tool install --global dotnet-ef
 dotnet ef database update
+dotnet build
 dotnet run
 ```
 
