@@ -14,6 +14,11 @@ Este projeto é uma aplicação console em C# (.NET 9) para cadastro de clientes
 
 Abaixo estão os comandos necessários, lembrando que ainda será preciso instalar o .Net SDK e o Entity Framework.
 
+⚠️ **Importante**
+Execute os comandos abaixo dentro da pasta "ControleDeClientes".
+
+
+
 ```bash
 dotnet restore
 dotnet tool install --global dotnet-ef
